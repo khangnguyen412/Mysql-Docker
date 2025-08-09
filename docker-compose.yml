@@ -1,14 +1,14 @@
-version: '3.9'
 name: mysql-database
 
 services:
+  # === SQl ===
   mysql:
     image: mysql:latest
     container_name: mysql
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: khang412
-    ports: 
+    ports:
       - "3307:3306"
     volumes:
       - mysql_data:/var/lib/mysql
@@ -21,6 +21,28 @@ services:
         reservations:
           cpus: '0.5'
           memory: 512M
+
+  # === Phpmyadmin ===
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: mysql-phpmyadmin
+    restart: always
+    ports:
+      - "11000:80"
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: root
+      PMA_PASSWORD: khang412
+    depends_on: 
+      - mysql
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 1G
+        reservations:
+          cpus: '0.25'
+          memory: 256M
 
 volumes:
   mysql_data:
