@@ -1,0 +1,4 @@
+*.dbml
+*.log
+schema.sql
+*.practice.sql
