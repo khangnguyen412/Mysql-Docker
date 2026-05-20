@@ -1,0 +1,4 @@
+## **PHẦN 8: CTE (Common Table Expression) & RECURSIVE**
+1. **Sử dụng CTE để tìm tất cả nhân viên có mức lương (giả định) cao hơn mức lương trung bình của phòng ban họ.** (Cần tạo bảng lương giả định – nếu không thì thay bằng: tìm nhân viên có số lượng tài khoản mở được nhiều hơn trung bình của phòng ban).
+2. **Viết CTE đệ quy để liệt kê cấp bậc quản lý của nhân viên có `emp_id = 1`** (ví dụ: Michael Smith) – hiển thị `emp_id`, `first_name`, `last_name`, cấp bậc (level).
+3. **Sử dụng CTE để tách riêng khách hàng là cá nhân và doanh nghiệp, sau đó union lại và tính tổng số dư tài khoản của mỗi nhóm.** (Mỗi CTE tính tổng số dư riêng).

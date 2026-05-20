@@ -12,7 +12,8 @@
             "driver": "MySQL",
             "name": "Docker",
             "database": "sql_practice",
-            "username": "root"
+            "username": "root",
+            "password": "khang412"
         }
     ],
     "dbmlERDPreviewer.preferredTheme": "light"
